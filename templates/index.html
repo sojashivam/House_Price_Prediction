@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="../static/CSS/style.css">
+</head>
+<body>
+<div class="container">
+    <form action="" class="details">
+        <div class="Title-left">
+            <h1>House Details</h1>
+            <hr>
+        </div>
+        <select name="location" class="contain-input" required>
+    <option value="" selected disabled hidden>Choose a location</option>
+    {% for loc in location %}
+        <option value="{{ loc }}">{{ loc }}</option>
+    {% endfor %}
+</select>
+        <input type="text" name="bhk" placeholder="Enter BHK" class="contain-input" required>
+        <input type="text" name="bath" placeholder="Enter Bathroom" class="contain-input" required>
+        <input type="text" name="sqft" placeholder="Enter Sqft" class="contain-input" required>
+        <button type="submit" onclick="sendData()">Submit<img src="../static/assets/arrow_icon.png" alt=""> </button>
+    </form>
+    <div class="image-right">
+        <img src="../static/assets/right_img.png" alt="">
+    </div>
+</div>
+</body>
+</html>
